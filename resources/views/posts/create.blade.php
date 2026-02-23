@@ -10,6 +10,7 @@
 
     <form action = "/posts/formcompleted" method = "post">
         @csrf
+        <!-- @method("PUT") -->
         Name: <input type="text" name="name"><br>
         Surname: <input type="text" name="surname"><br>
         E-mail: <input type="text" name="email"><br>

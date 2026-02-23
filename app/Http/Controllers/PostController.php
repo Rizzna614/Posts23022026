@@ -37,8 +37,8 @@ class PostController extends Controller
         return view ("get.posts", ["posts" => $posts]);
     }
 
-    public function update ()
+    public function edit ()
     {
-        
+        return view("put.edit");
     }
 }

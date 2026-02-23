@@ -13,4 +13,4 @@ Route::post("/posts/formcompleted", [PostController::class, "store"]);
 
 Route::get("/get/posts", [PostController::class, "index"]);
 
-Route::put("/put/edit/{posts}", [PostController::class, "update"]);
+Route::get("/put/{post}/edit", [PostController::class, "edit"])->name("put.edit");

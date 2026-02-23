@@ -23,7 +23,7 @@
     Name: {{$i -> name}} <br>
     Surname: {{$i -> surname}} <br>
     Email: {{$i -> email}} <br>
-    <a href = "">Edit</a> <br>
+    <a href = " {{ route('put.edit', $i->id) }} ">Edit</a> <br>
     @endforeach
 
 
