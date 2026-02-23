@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome blade</title>
+    <title>Edit</title>
 </head>
 <body>
-    <h1>Welcome!</h1>
 
-    <a href = "/posts/create">Form</a>
 </body>
 </html>
