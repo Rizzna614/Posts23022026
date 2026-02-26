@@ -24,6 +24,13 @@
     Surname: {{$i -> surname}} <br>
     Email: {{$i -> email}} <br>
     <a href = " {{ route('put.edit', $i->id) }} ">Edit</a> <br>
+    <a href = " {{ route('delete', $i->id) }} ">Delete</a>
+
+    <!-- <form action = " {{route('delete'), $i->id }} " method = "post">
+        @csrf
+        @method("DELETE")
+
+    </form> -->
     @endforeach
 
 

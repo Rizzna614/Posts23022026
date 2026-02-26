@@ -37,8 +37,33 @@ class PostController extends Controller
         return view ("get.posts", ["posts" => $posts]);
     }
 
-    public function edit ()
+    public function editView ($id)
     {
-        return view("put.edit");
+        $posts = Posts::find($id);
+
+        return view("put.edit", ["posts" => $posts]);
+
+
+    }
+
+    public function edit (Request $request, $id)
+    {
+        $posts = Posts::find($id);
+
+        $posts->update([
+            "name" => $request -> name,
+            "surname" => $request -> surname,
+            "email" => $request -> email,
+        ]);
+
+        return view("put.edited");
+    }
+
+    public function destroy ($id)
+    {
+        $post = Posts::find($id);
+        $post->delete();
+
+        return redirect()->route('allPosts')->with('success', 'Post deleted successfully!');
     }
 }
